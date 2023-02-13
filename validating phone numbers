@@ -1,0 +1,14 @@
+import re
+
+count = int(input())
+phone_numbers = []
+
+for i in range(count):
+    phone_numbers.append(input())
+
+for i in range(len(phone_numbers)):
+    match = re.search(r'^[7-9][0-9]{9}$', phone_numbers[i])
+    if match:
+        print('YES')
+    else:
+        print('NO')
